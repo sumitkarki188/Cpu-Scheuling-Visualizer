@@ -45,4 +45,82 @@ An interactive web application built with React.js to visualize and compare vari
 
 
 ### Setup Steps
+Sure! Here’s a polished README.md based on your content, ready for GitHub:
 
+# CPU Scheduling Visualizer
+
+A web-based CPU Scheduling Visualizer built with **React.js** and **Vite**.  
+Visualize how different CPU scheduling algorithms allocate CPU time to processes using an interactive Gantt chart.
+
+---
+
+## 📥 Installation
+
+### Step 1: Clone the Repository
+
+Using HTTPS:
+
+```bash
+git clone https://github.com/sumitkarki188/Cpu-Scheuling-Visualizer.git
+cd Cpu-Scheuling-Visualizer
+
+
+Alternative: Download ZIP from GitHub and extract it.
+
+Step 2: Install Dependencies
+
+Install all required packages:
+
+npm install
+
+
+This will install React, Vite, and other dependencies.
+
+Step 3: Start Development Server
+npm run dev
+
+
+You should see something like:
+
+VITE v5.0.0 ready in 500 ms
+➜ Local: http://localhost:5173/
+➜ Network: use --host to expose
+
+Step 4: Open in Browser
+
+Open your browser and go to: http://localhost:5173
+
+You should see the CPU Scheduling Visualizer homepage! 🎉
+
+🚀 Quick Start (One Command)
+git clone https://github.com/sumitkarki188/Cpu-Scheuling-Visualizer.git && cd Cpu-Scheuling-Visualizer && npm install && npm run dev
+
+📋 Available Commands
+Command	Description
+npm install	Install all dependencies
+npm run dev	Start development server (with hot reload)
+npm run build	Create production build
+npm run preview	Preview production build locally
+🌐 Deploy to Vercel
+Method 1: Using Vercel Dashboard (Easiest)
+
+Create Vercel Account
+Go to vercel.com
+ → Sign Up → GitHub login recommended
+
+Import Project
+Click Add New → Project → Select your GitHub repo Cpu-Scheuling-Visualizer
+
+Configure Project
+
+Framework Preset: Vite
+
+Build Command: npm run build
+
+Output Directory: dist
+
+Install Command: npm install
+
+Deploy
+Click Deploy, wait 1–2 minutes, and your app will be live!
+Example URL: https://your-project.vercel.app
