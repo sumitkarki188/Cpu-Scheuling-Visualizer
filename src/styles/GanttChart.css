@@ -1,0 +1,310 @@
+.gantt-container {
+  background: #1e293b;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 2px solid #334155;
+  margin-bottom: 2rem;
+}
+
+.gantt-container h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.5px;
+}
+
+/* Gantt Controls */
+.gantt-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.start-btn {
+  background: #10b981;
+}
+
+.start-btn:hover:not(:disabled) {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.pause-btn {
+  background: #f59e0b;
+}
+
+.pause-btn:hover:not(:disabled) {
+  background: #d97706;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.reset-btn {
+  background: #ef4444;
+}
+
+.reset-btn:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.time-display {
+  padding: 0.8rem 1.5rem;
+  background: #0f172a;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-left: auto;
+  color: #3b82f6;
+  border: 2px solid #334155;
+  font-size: 1.1rem;
+}
+
+/* Process Legend */
+.process-legend {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.legend-color {
+  width: 30px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid #334155;
+}
+
+/* Gantt Chart */
+.gantt-chart {
+  background: #0f172a;
+  padding: 2.5rem;
+  border-radius: 12px;
+  min-height: 220px;
+  border: 2px solid #334155;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+}
+
+.timeline {
+  position: relative;
+  height: 100px;
+  background: #1e293b;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 2px solid #334155;
+}
+
+.gantt-bar {
+  position: absolute;
+  height: 70px;
+  top: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.gantt-bar.active {
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  animation: pulse 1.5s infinite;
+}
+
+.gantt-bar.completed {
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.9);
+  }
+}
+
+.process-label {
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Time Marker */
+.time-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #ef4444;
+  z-index: 10;
+  transition: left 1s linear;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.8);
+}
+
+.time-marker::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #ef4444;
+}
+
+/* Time Labels */
+.time-labels {
+  position: relative;
+  height: 35px;
+  margin-top: 1rem;
+}
+
+.time-label {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+/* Ready Queue */
+.ready-queue-container {
+  background: #0f172a;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 2px solid #334155;
+}
+
+.queue-title {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.cpu-section label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+.process-boxes {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.process-box {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  min-width: 180px;
+  border: 2px solid #334155;
+}
+
+.status-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.process-badge {
+  display: inline-block;
+  background: #3b82f6;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  margin: 0.3rem;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.process-box.running .process-badge {
+  background: #10b981;
+  animation: pulse 1.5s infinite;
+}
+
+.waiting-badge {
+  background: #8b5cf6;
+}
+
+.process-box.empty {
+  opacity: 0.5;
+  font-style: italic;
+  color: #64748b;
+}
+
+.more-indicator {
+  margin-left: 0.5rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .gantt-container {
+    padding: 1.5rem;
+  }
+
+  .gantt-controls {
+    gap: 0.5rem;
+  }
+
+  .control-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .process-boxes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .process-box {
+    min-width: 100%;
+  }
+}
