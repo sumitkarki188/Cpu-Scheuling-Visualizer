@@ -101,26 +101,30 @@ npm install	Install all dependencies
 npm run dev	Start development server (with hot reload)
 npm run build	Create production build
 npm run preview	Preview production build locally
-🌐 Deploy to Vercel
-Method 1: Using Vercel Dashboard (Easiest)
 
-Create Vercel Account
-Go to vercel.com
- → Sign Up → GitHub login recommended
 
-Import Project
-Click Add New → Project → Select your GitHub repo Cpu-Scheuling-Visualizer
+## 🌐 Deploy to Vercel
 
-Configure Project
+### Method 1: Using Vercel Dashboard (Easiest)
 
-Framework Preset: Vite
+#### Step 1: Create Vercel Account
+1. Go to [vercel.com](https://vercel.com)
+2. Click **Sign Up**
+3. Sign up using **GitHub** (recommended)
 
-Build Command: npm run build
+#### Step 2: Import Project
+1. Click **Add New → Project**
+2. Select your GitHub repository: `Cpu-Scheuling-Visualizer`
 
-Output Directory: dist
+#### Step 3: Configure Project
+- **Framework Preset:** Vite  
+- **Build Command:** `npm run build`  
+- **Output Directory:** `dist`  
+- **Install Command:** `npm install`  
 
-Install Command: npm install
+#### Step 4: Deploy
+1. Click **Deploy**  
+2. Wait 1–2 minutes  
+3. Your app will be live! 🎉  
 
-Deploy
-Click Deploy, wait 1–2 minutes, and your app will be live!
-Example URL: https://your-project.vercel.app
+**Example URL:** `https://your-project.vercel.app`
