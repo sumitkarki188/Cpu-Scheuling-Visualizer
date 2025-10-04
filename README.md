@@ -1,4 +1,4 @@
-cat > README.md << 'EOF'
+
 # 🖥️ CPU Scheduling Visualizer
 
 An interactive web application built with React.js to visualize and compare various CPU scheduling algorithms with modern UI and real-time animations.
